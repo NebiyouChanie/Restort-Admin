@@ -25,5 +25,6 @@ router.patch('/:id',userController.updateUserDetail);
 router.post('/:userId/feedback', userController.addFeedback);
 
 router.get('/:userId/feedback-analysis', userAnalysisController.getUserFeedbackAnalysis);
+router.get('/orders/:id', userController.getOrders)
 
 module.exports = router
