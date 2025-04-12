@@ -1,6 +1,7 @@
 const userServices = require('../services/UserServices');
 const asyncErrorHandler = require('../middleware/asyncErrorHandler');
 const User = require('../models/userModel');
+const orderModel = require('../models/orderModel');
 
 
 // Register User
