@@ -62,7 +62,7 @@ exports.getAllUsers = async () => {
 
 // get User detail and order history
 exports.getUserDetail = async (userId) => {  
-    const customer = await User.findById(userId);
+    const customer = await User.findById({user: userId});
     if (!customer) {
         throw new customError("Customer doesn't exist.", 400);
     }
