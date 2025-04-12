@@ -143,3 +143,16 @@ exports.addFeedback = async (req, res) => {
         });
     }
 };
+
+exports.getOrders = async(req,res) =>{
+    try {
+        const {id} = req.params
+        const orders = await orderModel.find({user: id})
+        res.status(200).json({
+            orders
+        })
+    } catch (error) {
+        console.log(error.message)
+        res.status(400).json({msg: "an error has occured"})
+    }
+}
